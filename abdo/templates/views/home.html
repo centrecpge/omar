@@ -1,0 +1,18 @@
+{% extends "base_views.html" %}
+
+
+
+{% block Content %}
+{% if warn %}
+<div class="alert alert-danger" role="alert">
+  {{alert}}
+</div>
+{% else %}
+<div class="alert alert-success" role="alert">
+  {{alert}}
+</div>
+{% endif%}
+
+
+
+{% endblock %}

@@ -1,0 +1,31 @@
+
+{% import "bootstrap/wtf.html" as wtf %}
+{% macro render_form(form,Title,action,widt) %}
+<style >
+
+.btn {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.btn-default {
+    width: -webkit-fill-available;}
+</style>
+<div  style="
+    width: {{widt}}px;
+    border: 2px solid #000000;
+    padding: 20px;
+    margin: auto;
+">
+      <form class="form-signin" method="POST" action="{{action}}">
+        <h2 class="form-signin-heading">{{Title}}</h2>
+		{{ wtf.quick_form(form) }}
+      </form>
+      </div> <!-- /container -->
+{% endmacro %}

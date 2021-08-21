@@ -1,0 +1,12 @@
+
+{% extends "base_user.html" %}
+{% block Content %}
+
+	with : {{ uss.name }}
+	{% if F %}
+	{% for message in F.messages %}
+	<li>{{Users.get(message.user_id).name}} : {{message.content}}
+	{% endfor %}
+	{% endif %}
+{{render_form(form,'New Messages','/user/messages',500)}}
+{% endblock %}

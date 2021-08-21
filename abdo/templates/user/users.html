@@ -1,0 +1,7 @@
+{% extends "base_user.html" %}
+{% block Content %}
+	{% for user in users%}
+	<li>{{user.name}} , {{user.email}}<a href="invitez{{user.id}}">Invitation</a></li>
+	{% endfor %}
+
+{% endblock %}

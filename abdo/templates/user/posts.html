@@ -1,0 +1,14 @@
+{% extends "base_user.html" %}
+{% block Content %}
+	{% for post in Posts%}
+	<li>{{Users.get(post.user_id).name}} : {{post.content}}</li>
+	{% endfor %}
+	<br>
+	<h2>Your posts : </h2>
+	{% for post in us.posts%}
+	<li><span>{{Users.get(post.user_id).name}}</span> : {{post.content}}</li>
+	{% endfor %}
+	<br>
+	<br>	
+{{render_form(form,'New post','/user/posts',500)}}
+{% endblock %}
